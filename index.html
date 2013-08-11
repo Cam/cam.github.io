@@ -4,8 +4,20 @@
 		<style>
 			body {
 				background: url('http://cam.vc/images/wood.png') repeat;
+				font-family: sans-serif;
+				font-size: small;
+				text-decoration: none;
+				color:#888;
 				}
+			body, body a {
+				color:#888;
+			}
 			.container {
+				width: 300px;
+			  	position: absolute;
+			  	left: 50%;
+			  	top: 10%;
+			  	margin-left: -150px;
 			}
 
 			.circle {
@@ -14,20 +26,49 @@
 			  	height: 300px;
 			  	border-radius: 150px; 
 			  	overflow: hidden;
-			  	position: absolute;
-			  	left: 50%;
-			  	top: 50%;
-			  	margin-left: -150px;
-			  	margin-top: -150px;
 			  	border-top: 1px solid #545454;
 				border-bottom: 1px solid #FFF;
 			  	box-shadow: 0 0 10px #333 inset;
 			}
-			body, body a {
-				color:#888;
-				font-family: sans-serif;
-				font-size: small;
-				text-decoration: none;
+			#feed {
+				text-align: justify;
+			}
+			#feed ul {
+				margin:0;
+				padding:0;
+			}
+			#feed li {
+				list-style-position:inside;
+				list-style-type:none;
+				margin-bottom: 30px;
+				clear: both;
+			}
+			#feed .headline {
+				font-size: 1.6em;
+				font-weight: 800;
+				color: #333;
+			}
+			#feed p.date {
+				/* float: left;
+				line-height: 80px;
+				text-align: center;
+				color: #F1F1F1;
+				margin-right: 20px;
+				background: #777;
+			  	border-top: 1px solid #545454;
+				border-bottom: 1px solid #FFF;
+			  	box-shadow: 0 0 10px #333 inset;
+				height: 80px;
+				width: 80px;
+				-webkit-border-radius: 40px;
+				border-radius: 40px; */
+				display: none;
+			}
+			#feed div {
+				margin-top: 10px;
+			}
+			#feed #creditfooter {
+				display: none;
 			}
 		</style>
 	</head>
@@ -39,6 +80,11 @@
 			<a href="http://github.com/cam">
 				<p align="center">github.com/cam</p>
 			</a>
+			<br />
+			<div id="feed">
+				<script src="http://feeds.feedburner.com/camvc?format=sigpro" type="text/javascript" ></script>
+				<noscript><p>Subscribe to RSS headline updates from: <a href="http://feeds.feedburner.com/camvc"></a><br/></p></noscript>
+			</div>
 		</div> 
 	</body>
 </html>
